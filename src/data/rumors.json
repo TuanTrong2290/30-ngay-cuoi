@@ -1,0 +1,62 @@
+[
+  {
+    "id": "crack",
+    "name": "Tung tin: Nứt kết cấu",
+    "desc": "Báo lá cải đăng ảnh 'vết nứt'. Chủ hầm hoảng loạn bán tháo — giá sập, nguồn cung tăng gấp đôi.",
+    "cost": 8000,
+    "target": "zone",
+    "sentimentMul": 0.45,
+    "spill": 0.9,
+    "dump": true,
+    "panic": 6,
+    "suspicion": 12,
+    "headline": "NÓNG: {zone} phát hiện vết nứt chí mạng?",
+    "body": "Hình ảnh lan truyền cho thấy tường chịu lực có dấu hiệu rạn nứt. Hàng trăm chủ suất đổ xô bán tháo."
+  },
+  {
+    "id": "debunk",
+    "name": "Đính chính + 'Giấy kiểm định'",
+    "desc": "Mua một tờ chứng nhận an toàn và tung lên mạng. Niềm tin bật lại mạnh hơn trước.",
+    "cost": 12000,
+    "target": "zone",
+    "debunk": 1.45,
+    "panic": 2,
+    "suspicion": 8,
+    "headline": "{zone} ĐƯỢC KIỂM ĐỊNH: 'An toàn tuyệt đối'",
+    "body": "Đơn vị kiểm định độc lập xác nhận tin đồn trước đó là sai sự thật. Giá suất tăng vọt trong vài giờ."
+  },
+  {
+    "id": "hype",
+    "name": "Thuê bot mạng thổi giá",
+    "desc": "Hàng nghìn tài khoản ảo khen ngợi khu hầm. Giá nhích lên, ít rủi ro hơn.",
+    "cost": 6000,
+    "target": "zone",
+    "sentimentMul": 1.28,
+    "panic": 2,
+    "suspicion": 5,
+    "headline": "Cộng đồng mạng 'phát sốt' vì {zone}",
+    "body": "Hashtag về khu hầm leo top xu hướng suốt đêm. Nhiều người nổi tiếng được cho là đã đặt cọc."
+  },
+  {
+    "id": "doom",
+    "name": "Tung tin: Thiên thạch lớn hơn dự kiến",
+    "desc": "Gieo rắc hoảng loạn toàn thành phố. Mọi khu hầm đều tăng giá — kể cả vé VIP của bạn.",
+    "cost": 15000,
+    "target": "none",
+    "sentimentAll": 1.08,
+    "panic": 12,
+    "suspicion": 8,
+    "headline": "RÒ RỈ: Thiên thạch lớn gấp đôi công bố chính thức",
+    "body": "Một tài liệu 'mật' được chia sẻ hàng triệu lần. Cơ quan chức năng chưa lên tiếng."
+  },
+  {
+    "id": "lawyer",
+    "name": "Thuê luật sư xóa dấu vết",
+    "desc": "Gỡ bài, xóa log, mua sự im lặng. Đắt — nhưng giảm Nghi ngờ đáng kể.",
+    "cost": 25000,
+    "target": "none",
+    "suspicion": -20,
+    "headline": "",
+    "body": ""
+  }
+]

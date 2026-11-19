@@ -1,0 +1,47 @@
+[
+  {
+    "id": "A",
+    "name": "Hầm Metro Bến Thành",
+    "short": "KHU A",
+    "desc": "Ga ngầm được gia cố vội vàng. Đông người, dễ bán, giá vừa phải.",
+    "basePrice": 30000,
+    "integrity": 82,
+    "supply": 4
+  },
+  {
+    "id": "B",
+    "name": "Bunker Thủ Thiêm",
+    "short": "KHU B",
+    "desc": "Hầm cao cấp của giới siêu giàu. Ít suất, giá trên trời.",
+    "basePrice": 60000,
+    "integrity": 93,
+    "supply": 3
+  },
+  {
+    "id": "C",
+    "name": "Địa đạo Quân sự cũ",
+    "short": "KHU C",
+    "desc": "Hệ thống hầm cũ ở ngoại thành. Bền, nhưng xa và ẩm thấp.",
+    "basePrice": 22000,
+    "integrity": 74,
+    "supply": 5
+  },
+  {
+    "id": "D",
+    "name": "Tầng hầm Chung cư Gò Vấp",
+    "short": "KHU D",
+    "desc": "Bãi giữ xe được quảng cáo là 'hầm trú ẩn'. Rẻ. Rất rẻ.",
+    "basePrice": 12000,
+    "integrity": 33,
+    "supply": 7
+  },
+  {
+    "id": "E",
+    "name": "Hầm mỏ Lâm Đồng",
+    "short": "KHU E",
+    "desc": "Mỏ thiếc bỏ hoang sâu trong núi. Đang được cải tạo dở dang.",
+    "basePrice": 40000,
+    "integrity": 68,
+    "supply": 4
+  }
+]

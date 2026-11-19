@@ -1,0 +1,114 @@
+[
+  {
+    "id": "chinh_phu_tran_an",
+    "minDay": 1, "maxDay": 18, "weight": 3,
+    "headline": "Chính phủ trấn an: 'Quỹ đạo vẫn đang được tính toán'",
+    "body": "Người phát ngôn kêu gọi người dân bình tĩnh và không mua bán suất trú ẩn qua môi giới tự do.",
+    "effects": { "panicNatural": -3 }
+  },
+  {
+    "id": "sieu_thi",
+    "minDay": 3, "maxDay": 30, "weight": 3,
+    "headline": "Đám đông tràn vào siêu thị, kệ hàng trống trơn",
+    "body": "Mì gói, nước đóng chai và đèn pin cháy hàng chỉ trong vài giờ.",
+    "effects": { "panicNatural": 4 }
+  },
+  {
+    "id": "d_ri_nuoc",
+    "minDay": 4, "maxDay": 26, "weight": 2,
+    "headline": "Khu D: Cư dân phát hiện nước rỉ dưới tầng hầm",
+    "body": "Không phải tin đồn. Có video quay rõ dòng nước chảy dọc vách tường.",
+    "effects": { "zone": "D", "zoneSentiment": 0.75, "zoneIntegrity": -8 }
+  },
+  {
+    "id": "ty_phu_b",
+    "minDay": 2, "maxDay": 25, "weight": 2,
+    "headline": "Tỷ phú giấu tên mua trọn một tầng Khu B",
+    "body": "Giới thượng lưu đổ xô tìm kiếm những suất cuối cùng tại Thủ Thiêm.",
+    "effects": { "zone": "B", "zoneSentiment": 1.25 }
+  },
+  {
+    "id": "quy_dao",
+    "minDay": 6, "maxDay": 24, "weight": 2,
+    "headline": "Cơ quan vũ trụ quốc tế xác nhận: Va chạm là chắc chắn",
+    "body": "Xác suất được nâng lên 99,7%. Thị trường hầm trú ẩn chao đảo.",
+    "effects": { "panicNatural": 7, "sentimentAll": 1.05 }
+  },
+  {
+    "id": "mat_dien",
+    "minDay": 5, "maxDay": 30, "weight": 2,
+    "headline": "Mất điện diện rộng, thành phố chìm trong bóng tối",
+    "body": "Hệ thống đèn giao thông tê liệt. Nhiều nơi xảy ra hôi của.",
+    "effects": { "panicNatural": 3 }
+  },
+  {
+    "id": "quan_doi_c",
+    "minDay": 7, "maxDay": 26, "weight": 2,
+    "headline": "Quân đội trưng dụng một phần Khu C",
+    "body": "Nguồn cung tại địa đạo cũ hôm nay gần như bằng không.",
+    "effects": { "zone": "C", "zoneSentiment": 1.3, "supplyMul": 0 }
+  },
+  {
+    "id": "le_hoi",
+    "minDay": 8, "maxDay": 27, "weight": 2,
+    "headline": "Lễ hội 'Đêm cuối' thu hút hàng chục nghìn người",
+    "body": "Người trẻ chọn nhảy múa thay vì xếp hàng. 'Sống trọn từng ngày còn lại.'",
+    "effects": { "panicNatural": -2 }
+  },
+  {
+    "id": "e_gian_giao",
+    "minDay": 5, "maxDay": 25, "weight": 2,
+    "headline": "Sập giàn giáo tại công trường hầm mỏ Khu E",
+    "body": "Ba công nhân bị thương. Tiến độ cải tạo bị đình trệ.",
+    "effects": { "zone": "E", "zoneSentiment": 0.82, "zoneIntegrity": -6 }
+  },
+  {
+    "id": "e_hoan_thanh",
+    "minDay": 12, "maxDay": 27, "weight": 1,
+    "headline": "Khu E hoàn tất gia cố tầng sâu",
+    "body": "Đoàn kỹ sư Đức đánh giá kết cấu 'vượt mong đợi'.",
+    "effects": { "zone": "E", "zoneSentiment": 1.2, "zoneIntegrity": 12 }
+  },
+  {
+    "id": "a_qua_tai",
+    "minDay": 10, "maxDay": 28, "weight": 2,
+    "headline": "Hầm Metro quá tải: Bán vượt 140% sức chứa",
+    "body": "Ban quản lý thừa nhận đã 'bán nhầm' hàng nghìn suất.",
+    "effects": { "zone": "A", "zoneSentiment": 0.8, "zoneIntegrity": -5 }
+  },
+  {
+    "id": "mat_thuong",
+    "minDay": 18, "maxDay": 30, "weight": 3,
+    "headline": "Đã thấy thiên thạch bằng mắt thường",
+    "body": "Một đốm sáng đỏ trên bầu trời phía đông. Không ai còn nghi ngờ nữa.",
+    "effects": { "panicNatural": 8, "sentimentAll": 1.06 }
+  },
+  {
+    "id": "san_bay",
+    "minDay": 14, "maxDay": 30, "weight": 2,
+    "headline": "Hỗn loạn tại sân bay, mọi chuyến bay bị hủy",
+    "body": "Hàng nghìn người mắc kẹt. Những ai có hầm trú ẩn bắt đầu ở lì dưới lòng đất.",
+    "effects": { "panicNatural": 5 }
+  },
+  {
+    "id": "gia_vang",
+    "minDay": 1, "maxDay": 30, "weight": 1,
+    "headline": "Giá vàng vượt mọi kỷ lục — rồi sập 40% trong một giờ",
+    "body": "'Vàng có ăn được đâu,' một nhà đầu tư chua chát.",
+    "effects": { "panicNatural": 2 }
+  },
+  {
+    "id": "bo_tin",
+    "scripted": true, "minDay": 1, "maxDay": 30,
+    "headline": "Người cha quỳ suốt đêm trước văn phòng môi giới",
+    "body": "Đám đông tụ tập, chĩa điện thoại vào cửa văn phòng. Ai đó viết lên tường: 'BỌN BUÔN MẠNG NGƯỜI'.",
+    "effects": { "suspicion": 8, "schedule": { "type": "visitor", "id": "ong_bo_2", "inDays": 0 } }
+  },
+  {
+    "id": "doi_thu_tra_thu",
+    "scripted": true, "minDay": 1, "maxDay": 30,
+    "headline": "Hắc Long được tại ngoại — 'Tôi sẽ kể hết'",
+    "body": "Gã môi giới tung lên mạng hàng loạt ảnh chụp tin nhắn, trong đó có tên của bạn.",
+    "effects": { "suspicion": 18 }
+  }
+]

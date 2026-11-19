@@ -1,0 +1,662 @@
+[
+  {
+    "id": "ong_bo",
+    "name": "Ông Hòa",
+    "role": "Người cha, thợ sửa xe",
+    "portrait": {
+      "color": "#5a4636",
+      "hat": "cap",
+      "build": "broad"
+    },
+    "minDay": 2,
+    "maxDay": 14,
+    "weight": 3,
+    "lines": [
+      "Tôi bán nhà rồi. Bán cả xe, cả đồ nghề.",
+      "Tôi không cần chỗ cho tôi. Con bé nhà tôi mới 9 tuổi... Anh có suất nào không? Bao nhiêu cũng được."
+    ],
+    "choices": [
+      {
+        "label": "Bán 1 suất — giá gấp 3",
+        "hint": "Ông ấy sẽ trả. Ông ấy không còn lựa chọn.",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 3,
+          "conscience": -2,
+          "flag": "bo_bi_ep"
+        },
+        "result": "Ông Hòa đếm từng xấp tiền nhàu nát. Tay ông run, nhưng ông vẫn cúi đầu cảm ơn."
+      },
+      {
+        "label": "Bán đúng giá thị trường",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 1,
+          "conscience": 1,
+          "flag": "bo_mua"
+        },
+        "result": "Ông nắm chặt tay bạn rất lâu. 'Tôi sẽ nhớ mặt anh.'"
+      },
+      {
+        "label": "Cho không 1 suất",
+        "hint": "Mất một suất. Được... một điều gì đó.",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "giveSlot": true,
+          "conscience": 3,
+          "flag": "bo_cho"
+        },
+        "result": "Ông Hòa sững người, rồi bật khóc như một đứa trẻ."
+      },
+      {
+        "label": "Từ chối",
+        "effects": {
+          "conscience": -1,
+          "flag": "bo_tuchoi",
+          "schedule": {
+            "type": "event",
+            "id": "bo_tin",
+            "inDays": 3
+          }
+        },
+        "result": "Ông đứng dậy, không nói gì. Cánh cửa khép lại rất khẽ."
+      }
+    ]
+  },
+  {
+    "id": "quan_chuc",
+    "name": "Ông Lâm",
+    "role": "Phó Giám đốc Sở",
+    "portrait": {
+      "color": "#2c2f3a",
+      "hat": "none",
+      "glasses": true,
+      "build": "broad"
+    },
+    "minDay": 3,
+    "maxDay": 22,
+    "weight": 2,
+    "lines": [
+      "Cậu làm ăn khá đấy. Tôi để ý cậu lâu rồi.",
+      "Tôi cần một suất cho... người nhà. Tiền không thành vấn đề. Còn nếu cậu biết điều, tôi có thể giúp cậu mấy chuyện 'giấy tờ'."
+    ],
+    "choices": [
+      {
+        "label": "Bán suất giá cắt cổ (x4)",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 4,
+          "conscience": -1,
+          "flag": "quan_mua"
+        },
+        "result": "Hắn ký séc không chớp mắt. 'Cậu sẽ đi xa đấy.'"
+      },
+      {
+        "label": "Nhận 'phí quan hệ' và nhờ hắn che chắn",
+        "hint": "Một lần thoát tội nếu bị bắt.",
+        "effects": {
+          "cash": 30000,
+          "suspicion": -15,
+          "conscience": -2,
+          "flag": "quan_che"
+        },
+        "result": "'Từ giờ có chuyện gì, cứ gọi tôi.' Hắn để lại một danh thiếp mạ vàng."
+      },
+      {
+        "label": "Đuổi hắn ra ngoài",
+        "effects": {
+          "suspicion": 12,
+          "conscience": 1
+        },
+        "result": "Hắn cười nhạt. 'Cậu sẽ hối hận.' Chiều đó, có người lạ đứng trước văn phòng của bạn."
+      }
+    ]
+  },
+  {
+    "id": "ky_su",
+    "name": "Chị Mai",
+    "role": "Kỹ sư kết cấu, thất nghiệp",
+    "portrait": {
+      "color": "#3d5a52",
+      "hat": "helmet",
+      "glasses": true,
+      "build": "slim"
+    },
+    "minDay": 2,
+    "maxDay": 24,
+    "weight": 3,
+    "lines": [
+      "Tôi không có tiền. Nhưng tôi có cái này.",
+      "Bản vẽ gia cố hầm, tôi làm 6 năm cho công ty xây dựng ngầm. Và... tôi biết khu nào nứt thật, khu nào chỉ là tin đồn."
+    ],
+    "choices": [
+      {
+        "label": "Đổi 1 suất lấy bản vẽ gia cố",
+        "hint": "Hầm riêng +25%",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "giveSlot": true,
+          "bunker": 25,
+          "conscience": 1,
+          "flag": "co_ky_su"
+        },
+        "result": "Chị Mai trải bản vẽ ra bàn và bắt tay vào việc ngay đêm đó."
+      },
+      {
+        "label": "Trả tiền mua bản vẽ",
+        "hint": "Hầm riêng +15%",
+        "effects": {
+          "cash": -35000,
+          "bunker": 15
+        },
+        "result": "Chị nhận tiền, gật đầu, nhưng không nhìn vào mắt bạn."
+      },
+      {
+        "label": "Trả tiền để biết sự thật về các khu",
+        "hint": "Thấy độ bền THẬT của mọi khu hầm",
+        "effects": {
+          "cash": -15000,
+          "flag": "biet_su_that"
+        },
+        "result": "Chị đánh dấu lên bản đồ. Có những con số khiến bạn lạnh gáy."
+      },
+      {
+        "label": "Không cần",
+        "effects": {},
+        "result": "Chị cuộn bản vẽ lại, lặng lẽ bước ra."
+      }
+    ]
+  },
+  {
+    "id": "nha_bao",
+    "name": "Khánh",
+    "role": "Phóng viên điều tra",
+    "portrait": {
+      "color": "#4a3b52",
+      "hat": "beret",
+      "build": "slim"
+    },
+    "minDay": 5,
+    "maxDay": 28,
+    "weight": 2,
+    "lines": [
+      "Ba vụ 'nứt hầm' trong một tuần, và lần nào anh cũng mua vào đúng đáy. Trùng hợp nhỉ?",
+      "Tôi sắp lên bài. Anh có muốn... bình luận gì không?"
+    ],
+    "choices": [
+      {
+        "label": "Đưa phong bì",
+        "effects": {
+          "cash": -25000,
+          "suspicion": -15,
+          "conscience": -1
+        },
+        "result": "Khánh nhìn xấp tiền một lúc lâu rồi bỏ vào túi. 'Bài này... chưa đủ bằng chứng.'"
+      },
+      {
+        "label": "Mớm tin về đối thủ để đánh lạc hướng",
+        "effects": {
+          "suspicion": -8,
+          "panic": 4,
+          "flag": "mom_tin"
+        },
+        "result": "Mắt anh ta sáng lên. Sáng mai, cả thành phố sẽ nói về một kẻ khác."
+      },
+      {
+        "label": "Mời ra ngoài",
+        "effects": {
+          "suspicion": 14
+        },
+        "result": "'Hẹn gặp anh trên trang nhất.'"
+      }
+    ]
+  },
+  {
+    "id": "ba_sau",
+    "name": "Bà Sáu",
+    "role": "Cụ bà bán hủ tiếu",
+    "portrait": {
+      "color": "#6b5a4a",
+      "hat": "bun",
+      "build": "small"
+    },
+    "minDay": 1,
+    "maxDay": 20,
+    "weight": 3,
+    "lines": [
+      "Bà già rồi con. Bà muốn chết ở nhà, cạnh bàn thờ ông nhà.",
+      "Con trai bà mua cho bà một suất. Con mua lại đi, bà lấy tiền gửi về quê cho mấy đứa cháu."
+    ],
+    "choices": [
+      {
+        "label": "Ép giá: mua với 30%",
+        "effects": {
+          "buySlot": 0.3,
+          "conscience": -2
+        },
+        "result": "Bà không biết giá thị trường. Bà cảm ơn bạn hai lần."
+      },
+      {
+        "label": "Mua đúng giá",
+        "effects": {
+          "buySlot": 1,
+          "conscience": 1
+        },
+        "result": "Bà dúi vào tay bạn một gói kẹo gừng. 'Con ăn đi, ngày cuối rồi.'"
+      },
+      {
+        "label": "Khuyên bà giữ lại",
+        "effects": {
+          "conscience": 2
+        },
+        "result": "Bà cười móm mém. 'Con tốt quá. Thời này hiếm lắm.'"
+      }
+    ]
+  },
+  {
+    "id": "hacker",
+    "name": "\"Zero\"",
+    "role": "Chủ trại bot",
+    "portrait": {
+      "color": "#1f3a3a",
+      "hat": "hood",
+      "glasses": true,
+      "build": "slim"
+    },
+    "minDay": 3,
+    "maxDay": 20,
+    "weight": 2,
+    "forbidFlag": "co_bot",
+    "lines": [
+      "Tin đồn của anh để lại dấu vết như voi đi qua bãi cát.",
+      "Thuê mạng proxy của tôi đi. Tin đồn vẫn lan, nhưng chẳng ai lần ra được anh."
+    ],
+    "choices": [
+      {
+        "label": "Thuê trại bot",
+        "hint": "Tin đồn chỉ gây 60% Nghi ngờ",
+        "effects": {
+          "cash": -30000,
+          "flag": "co_bot"
+        },
+        "result": "'Chào mừng tới thế giới vô hình.' Hắn biến mất như chưa từng tới."
+      },
+      {
+        "label": "Từ chối",
+        "effects": {},
+        "result": "Hắn nhún vai. 'Tùy anh. Còn 30 ngày thôi mà.'"
+      }
+    ]
+  },
+  {
+    "id": "nha_thien_van",
+    "name": "TS. Phong",
+    "role": "Nhà thiên văn học",
+    "portrait": {
+      "color": "#3a4a6b",
+      "hat": "none",
+      "glasses": true,
+      "build": "slim"
+    },
+    "minDay": 4,
+    "maxDay": 26,
+    "weight": 2,
+    "lines": [
+      "Đám đông đang tự giẫm đạp lên nhau vì những tin đồn vô căn cứ.",
+      "Tôi muốn tổ chức một buổi công bố số liệu thật, để người ta bình tĩnh lại. Nhưng tôi cần người tài trợ."
+    ],
+    "choices": [
+      {
+        "label": "Tài trợ buổi công bố",
+        "hint": "Giảm Hoảng loạn do bạn gây ra → vé VIP rẻ hơn",
+        "effects": {
+          "cash": -40000,
+          "panic": -14,
+          "conscience": 2
+        },
+        "result": "Buổi phát sóng có hàng triệu người xem. Thành phố thở chậm lại một chút."
+      },
+      {
+        "label": "Trả tiền để ông ấy im lặng",
+        "hint": "Hoảng loạn có lợi cho việc kinh doanh",
+        "effects": {
+          "cash": -20000,
+          "panic": 4,
+          "conscience": -2
+        },
+        "result": "Ông nhìn bạn rất lâu, rồi cầm tiền đi. Ông không quay lại nữa."
+      },
+      {
+        "label": "Không quan tâm",
+        "effects": {},
+        "result": "'Lịch sử sẽ nhớ những ai đứng ngoài cuộc,' ông nói khi đi ra."
+      }
+    ]
+  },
+  {
+    "id": "doi_thu",
+    "name": "Hắc Long",
+    "role": "Môi giới đối thủ",
+    "portrait": {
+      "color": "#3a2020",
+      "hat": "fedora",
+      "build": "broad"
+    },
+    "minDay": 5,
+    "maxDay": 22,
+    "weight": 2,
+    "forbidFlag": "cartel",
+    "lines": [
+      "Hai ta đang đánh nhau trên cùng một miếng bánh.",
+      "Bắt tay đi. Tôi có báo, anh có bot. Mỗi tin đồn của ta sẽ mạnh gấp rưỡi."
+    ],
+    "choices": [
+      {
+        "label": "Bắt tay lập cartel",
+        "hint": "Tin đồn mạnh x1.5, nhưng Nghi ngờ +10",
+        "effects": {
+          "suspicion": 10,
+          "conscience": -1,
+          "flag": "cartel"
+        },
+        "result": "Bàn tay hắn lạnh như kim loại. 'Hợp tác vui vẻ.'"
+      },
+      {
+        "label": "Bí mật tố cáo hắn với cảnh sát",
+        "hint": "Nghi ngờ −18. Hắn sẽ trả thù.",
+        "effects": {
+          "suspicion": -18,
+          "flag": "to_doi_thu",
+          "schedule": {
+            "type": "event",
+            "id": "doi_thu_tra_thu",
+            "inDays": 4
+          }
+        },
+        "result": "Bạn mỉm cười tiễn hắn ra cửa, rồi nhấc điện thoại."
+      },
+      {
+        "label": "Phớt lờ",
+        "effects": {},
+        "result": "'Lời mời không có lần hai đâu.'"
+      }
+    ]
+  },
+  {
+    "id": "me_tre",
+    "name": "Chị Linh",
+    "role": "Mẹ đơn thân",
+    "portrait": {
+      "color": "#5a3a4a",
+      "hat": "bun",
+      "build": "slim"
+    },
+    "minDay": 6,
+    "maxDay": 28,
+    "weight": 2,
+    "lines": [
+      "Em chỉ có cái này thôi. Nhẫn cưới của em. Chồng em mất năm ngoái.",
+      "Thằng bé mới 2 tuổi. Một suất ở đâu cũng được, khu D cũng được..."
+    ],
+    "choices": [
+      {
+        "label": "Nhận nhẫn, đổi 1 suất",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "giveSlot": true,
+          "cash": 4000,
+          "conscience": 1
+        },
+        "result": "Chiếc nhẫn nhỏ, mỏng, đã mòn. Chị ôm con đi ra, không ngoảnh lại."
+      },
+      {
+        "label": "Cho không, trả lại nhẫn",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "giveSlot": true,
+          "conscience": 3,
+          "flag": "cuu_me_con"
+        },
+        "result": "Đứa bé vẫy tay chào bạn qua vai mẹ."
+      },
+      {
+        "label": "Từ chối",
+        "effects": {
+          "conscience": -2
+        },
+        "result": "Tiếng khóc của đứa trẻ còn vọng lại rất lâu ngoài hành lang."
+      }
+    ]
+  },
+  {
+    "id": "ngoi_sao",
+    "name": "Vy Vy",
+    "role": "Ca sĩ, 12 triệu người theo dõi",
+    "portrait": {
+      "color": "#6b3a5a",
+      "hat": "none",
+      "glasses": true,
+      "build": "slim"
+    },
+    "minDay": 4,
+    "maxDay": 24,
+    "weight": 2,
+    "lines": [
+      "Hi anh! Em cần một suất 'xịn', có góc sống ảo càng tốt.",
+      "Em có thể livestream giới thiệu hầm cho anh luôn. Fan em mua gì là cháy hàng cái đó."
+    ],
+    "choices": [
+      {
+        "label": "Bán suất + nhờ cô ấy quảng cáo",
+        "hint": "Giá mọi khu tăng, Hoảng loạn tăng",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 1.5,
+          "sentimentAll": 1.12,
+          "panic": 5
+        },
+        "result": "Buổi livestream đạt 3 triệu lượt xem. Ai cũng muốn một chỗ dưới lòng đất."
+      },
+      {
+        "label": "Bán suất giá x2.5",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 2.5
+        },
+        "result": "'Ok anh, chuyển khoản liền!'"
+      },
+      {
+        "label": "Hết suất rồi",
+        "effects": {},
+        "result": "Cô bĩu môi rồi đi ra, vừa đi vừa lướt điện thoại."
+      }
+    ]
+  },
+  {
+    "id": "sinh_vien",
+    "name": "Nhóm Sinh viên",
+    "role": "5 người, góp tiền chung",
+    "portrait": {
+      "color": "#3a5a3a",
+      "hat": "cap",
+      "build": "small"
+    },
+    "minDay": 3,
+    "maxDay": 26,
+    "weight": 2,
+    "lines": [
+      "Tụi em góp hết học bổng, tiền làm thêm, bán cả laptop.",
+      "Chỉ mua được một suất. Tụi em sẽ bốc thăm xem ai vào. Anh bán cho tụi em nhé?"
+    ],
+    "choices": [
+      {
+        "label": "Bán đúng giá",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 1,
+          "conscience": 1
+        },
+        "result": "Cả nhóm ôm nhau. Bạn không dám hỏi ai sẽ là người bốc trúng."
+      },
+      {
+        "label": "Bán giá x2, lấy hết tiền của chúng",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "sellSlot": 2,
+          "conscience": -2
+        },
+        "result": "Chúng lục túi, gom đến đồng xu cuối cùng."
+      },
+      {
+        "label": "Từ chối",
+        "effects": {
+          "conscience": -1
+        },
+        "result": "'Dạ... tụi em cảm ơn anh.'"
+      }
+    ]
+  },
+  {
+    "id": "su_thay",
+    "name": "Sư thầy Minh Tâm",
+    "role": "Trụ trì chùa ven sông",
+    "portrait": {
+      "color": "#7a5a2a",
+      "hat": "none",
+      "build": "slim"
+    },
+    "minDay": 8,
+    "maxDay": 28,
+    "weight": 1,
+    "lines": [
+      "A Di Đà Phật. Bần tăng không đến mua gì cả.",
+      "Chùa đang nấu cơm cho người vô gia cư. Thí chủ có lòng thì góp chút ít. Không có cũng không sao."
+    ],
+    "choices": [
+      {
+        "label": "Cúng dường",
+        "effects": {
+          "cash": -15000,
+          "conscience": 2,
+          "suspicion": -4
+        },
+        "result": "Sư thầy chắp tay. 'Thí chủ vẫn còn một nửa trái tim.'"
+      },
+      {
+        "label": "Không",
+        "effects": {},
+        "result": "Sư thầy mỉm cười như thể đã biết trước câu trả lời."
+      }
+    ]
+  },
+  {
+    "id": "thanh_tra",
+    "name": "Thanh tra Đức",
+    "role": "Cục Chống thao túng thị trường",
+    "portrait": {
+      "color": "#22303a",
+      "hat": "fedora",
+      "build": "broad"
+    },
+    "minDay": 1,
+    "maxDay": 30,
+    "scripted": true,
+    "lines": [
+      "Hồ sơ của anh dày lên mỗi ngày đấy.",
+      "Tôi có thể làm ngơ... hoặc tôi có thể gõ cửa vào lúc 6 giờ sáng mai. Anh chọn đi."
+    ],
+    "choices": [
+      {
+        "label": "Hối lộ",
+        "effects": {
+          "cash": -60000,
+          "suspicion": -30,
+          "conscience": -1
+        },
+        "result": "Phong bì biến mất vào túi áo khoác. 'Tôi chưa từng tới đây.'"
+      },
+      {
+        "label": "Gọi cho ông Lâm",
+        "hint": "Dùng lá bài 'che chắn'",
+        "requires": [
+          "flag:quan_che"
+        ],
+        "effects": {
+          "suspicion": -40,
+          "removeFlag": "quan_che"
+        },
+        "result": "Điện thoại của thanh tra rung. Anh ta nghe, mặt tái đi, rồi rời khỏi văn phòng."
+      },
+      {
+        "label": "Im lặng, gọi luật sư",
+        "effects": {
+          "suspicion": 6
+        },
+        "result": "'Được thôi. Chúng ta sẽ gặp lại.'"
+      }
+    ]
+  },
+  {
+    "id": "ong_bo_2",
+    "name": "Ông Hòa",
+    "role": "Người cha — lần thứ hai",
+    "portrait": {
+      "color": "#4a3a2e",
+      "hat": "cap",
+      "build": "broad"
+    },
+    "minDay": 1,
+    "maxDay": 30,
+    "scripted": true,
+    "lines": [
+      "Tôi lại tới đây. Tôi đã quỳ ngoài kia hai đêm rồi.",
+      "Tôi xin anh. Con bé đang sốt. Tôi không còn gì nữa, chỉ còn cái mạng này."
+    ],
+    "choices": [
+      {
+        "label": "Cho con bé một suất",
+        "requires": [
+          "slot"
+        ],
+        "effects": {
+          "giveSlot": true,
+          "conscience": 4,
+          "flag": "bo_cho",
+          "suspicion": -6
+        },
+        "result": "Ông Hòa không nói nổi thành lời. Đám đông ngoài kia lặng lẽ giải tán."
+      },
+      {
+        "label": "Gọi bảo vệ",
+        "effects": {
+          "conscience": -3,
+          "suspicion": 8,
+          "flag": "bo_duoi"
+        },
+        "result": "Người ta kéo ông ra ngoài. Ông không chống cự."
+      }
+    ]
+  }
+]
